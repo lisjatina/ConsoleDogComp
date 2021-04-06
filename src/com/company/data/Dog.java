@@ -36,9 +36,10 @@ public class Dog {
         this.refusals = refusals;
     }
 
-    public Dog(String petName, Double time, Integer refusals) {
+    public Dog(String petName, Double time, Integer penalties, Integer refusals) {
         this.petName = petName;
         this.time = time;
+        this.penalties = penalties;
         this.refusals = refusals;
     }
 
@@ -148,7 +149,7 @@ public class Dog {
         return "Dog{" +
                 "petName='" + petName + '\'' +
                 ", time=" + time +
-                ", penalties=" + penalties +
+                ", refusals=" + refusals +
                 '}';
     }
 }
