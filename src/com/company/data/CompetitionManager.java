@@ -1,15 +1,9 @@
 package com.company.data;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class CompetitionManager {
 
     private Course course;
@@ -24,7 +18,7 @@ public class CompetitionManager {
     public void startA3(){courseA3.calculateStandardTime();
     }
 
-    public List <Participant> getParticipants(){
+    public List<Participant> getParticipants(){
      // return list of participants (participants DTO?) with Hibernate connection
         return new ArrayList<>();
     }
