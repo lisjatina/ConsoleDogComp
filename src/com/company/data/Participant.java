@@ -49,4 +49,14 @@ public class Participant {
     public void setDog(Dog dog) {
         this.dog = dog;
     }
+
+    @Override
+    public String toString() {
+        return "Participant{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", dog=" + dog +
+                '}';
+    }
 }
