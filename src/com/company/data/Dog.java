@@ -13,7 +13,7 @@ public class Dog {
     private String disq;
     private Double fullPenalties;
     private Double timePenalties;
-    private Integer penalties; // mistakes?
+    private Integer numberOfMistakes;
     private Integer refusals;
 
     public Dog() {
@@ -32,14 +32,15 @@ public class Dog {
         this.disq = disq;
         this.fullPenalties = fullPenalties;
         this.timePenalties = timePenalties;
-        this.penalties = penalties;
+        this.numberOfMistakes = penalties;
         this.refusals = refusals;
     }
 
-    public Dog(String petName, Double time, Integer penalties, Integer refusals) {
+    public Dog(String petName, Double time, String disq, Integer penalties, Integer refusals) {
         this.petName = petName;
         this.time = time;
-        this.penalties = penalties;
+        this.disq = disq;
+        this.numberOfMistakes = penalties;
         this.refusals = refusals;
     }
 
@@ -128,12 +129,12 @@ public class Dog {
         this.timePenalties = timePenalties;
     }
 
-    public Integer getPenalties() {
-        return penalties;
+    public Integer getNumberOfMistakes() {
+        return numberOfMistakes;
     }
 
-    public void setPenalties(Integer penalties) {
-        this.penalties = penalties;
+    public void setNumberOfMistakes(Integer numberOfMistakes) {
+        this.numberOfMistakes = numberOfMistakes;
     }
 
     public Integer getRefusals() {

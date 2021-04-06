@@ -37,7 +37,6 @@ public class Course {
         }
     }
 
-
     public boolean disqForThreeRefusals(Integer refusal) {
         if (refusal >= 3) {
           return true;
@@ -55,12 +54,14 @@ public class Course {
 
     //либо возвращает отсортированный список участников
     public void calculateResult(Participant participant){
-    if (disqForExceedingTime(participant.getDog().getTime()) || disqForThreeRefusals(participant.getDog().getRefusals())){
+    if (disqForExceedingTime(participant.getDog().getTime()) || disqForThreeRefusals(participant.getDog().getRefusals())
+    || disqualified(participant.getDog().getDisq())){
+// поменять все поля
         participant.getDog().setTime(500.0);
         System.out.println("Dog dot disq");
        }
      else {
-        System.out.println(calculateTotalPenalties(participant.getDog().getPenalties(), participant.getDog().getTime()));
+        System.out.println(calculateTotalPenalties(participant.getDog().getNumberOfMistakes(), participant.getDog().getTime()));
     }
     }
     //передается список участников, на котором вызывается метод calculate results
