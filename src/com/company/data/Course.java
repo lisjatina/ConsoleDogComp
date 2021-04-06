@@ -46,12 +46,12 @@ public class Course {
     }
 
     // ok - если собака снялась, убежав куда не надо
-//    public void disqualified() {
-//        if (getDogTime() == 500) {
-//            //this.dogTime = null;
-//            this.disq = "DISQ";
-////        }
-//    }
+    public boolean disqualified(String disq) {
+        if (disq.equalsIgnoreCase("disq")) {
+            return true;
+     }
+        return false;
+    }
 
     //либо возвращает отсортированный список участников
     public void calculateResult(Participant participant){
